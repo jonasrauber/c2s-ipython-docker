@@ -24,7 +24,7 @@ RUN \
   python setup.py install
 
 RUN \
-  pip install cython && \
+  pip install cython --upgrade && \
   pip install git+https://github.com/lucastheis/c2s.git
 
 VOLUME /data/workdir
