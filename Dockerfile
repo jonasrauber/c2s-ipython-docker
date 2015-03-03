@@ -1,4 +1,4 @@
-FROM ipython/scipystack
+FROM ipython/scipyserver
 
 MAINTAINER Jonas Rauber
 
