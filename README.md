@@ -24,13 +24,13 @@ docker build --rm -t jonasrauber/c2s-ipython https://github.com/jonasrauber/c2s-
 You can than use it similar to the [ipython/scipyserver docker image](https://registry.hub.docker.com/u/ipython/scipyserver/).
 
 ```sh
-docker run -it --rm -p 443:8888 -e "PASSWORD=MakeAPassword" jonasrauber/c2s-ipython
+docker run -it --rm -p 443:8888 -e "PASSWORD=MakeAPassword" -v "$PWD:/notebooks" jonasrauber/c2s-ipython
 ```
 
 You should than be able to reach the IPython notebook at https://hostname. Please change the password. You might choose another port instead of 443. If you don't want to use HTTPS, set the `USE_HTTP` environment variable `-e "USE_HTTP=1"`.
 
 ```sh
-docker run -it --rm -p 80:8888 -e "PASSWORD=MakeAPassword" -e "USE_HTTP=1" jonasrauber/c2s-ipython
+docker run -it --rm -p 80:8888 -e "PASSWORD=MakeAPassword" -e "USE_HTTP=1" -v "$PWD:/notebooks" jonasrauber/c2s-ipython
 ```
 
 To get more information on `c2s` itself, have a look at the [c2s repository](https://github.com/lucastheis/c2s) and the [c2s documentaiton](http://c2s.readthedocs.org/en/latest/).
