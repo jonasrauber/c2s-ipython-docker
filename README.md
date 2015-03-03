@@ -1,6 +1,8 @@
 # c2s-ipython-docker
 Dockerfile for the [c2s toolbox](https://github.com/lucastheis/c2s) with IPython support.
 
+The image is available as an automated build on [Docker Hub](https://registry.hub.docker.com/u/jonasrauber/c2s-ipython/).
+
 If you don't need IPython, consider using [c2s-docker](https://github.com/jonasrauber/c2s-docker) instead.
 
 ## How to use
